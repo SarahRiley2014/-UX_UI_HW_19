@@ -9,6 +9,14 @@ $( ".btn" ).hover(
     }
   );
 
+  $( ".link" ).hover(
+    function() {
+      $( this ).addClass( "hover" );
+    }, function() {
+      $( this ).removeClass( "hover" );
+    }
+  );
+
 var container = $('div');
 
 function scrollParagraph1() {
@@ -27,4 +35,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 
+});
+
+$(document).ready(function() {
+  var offset = 220;
+  var duration = 500;
+  $(window).scroll(function() {
+      if ($(this).scrollTop() > offset) {
+          $('.back-to-top').fadeIn(duration);
+      } else {
+          $('.back-to-top').fadeOut(duration);
+      }
+  });
+  
+  $('.back-to-top').click(function(event) {
+      event.preventDefault();
+      $('html, body').animate({scrollTop: 0}, duration);
+      return false;
+  })
 });

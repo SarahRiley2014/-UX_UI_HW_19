@@ -1,31 +1,35 @@
 body {
     background: var(--portfolio-background, #FCF9F2); 
-    margin: 2px;
+    
 }
 nav {
+    background-color: #FCF9F2;
+    height: auto;
     width: 98%;
     padding: 1%;
-}
-ul {
-    width: 50%;
-    margin-left: auto;
+    
 }
 
+/* ul {
+    width: 50%;
+} */
+
 img {
-    height: 100px;
+    height: 25%;
     width: auto;
 }
 
 li {
     display: block;
     text-align: center;
+    text-decoration:none ;
 }
 
 h1 {
     color: var(--portfolio-text-main, #231F20);
     text-align: center;
     font-family: Judson;
-    font-size: 32px;
+    font-size: 37px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -37,7 +41,7 @@ h2 {
         color: var(--portfolio-text-main, #231F20);
         text-align: center;
         font-family: Judson;
-        font-size: 30px;
+        font-size: 35px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -49,13 +53,39 @@ h3 {
     color: var(--portfolio-text-main, #231F20);
     text-align: center;
     font-family: Judson;
-    font-size: 28px;
+    font-size: 33px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     width: auto;
     background: var(--portfolio-background, #FCF9F2)
 }
+
+
+a:link {
+  color: #231F20;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #231F20;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #231F20;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: #231F20;
+  background-color: transparent;
+  text-decoration: none;
+}
+
 
 .flex {
     display:flex;
@@ -71,17 +101,32 @@ h3 {
     text-align: center;
 }
 
-#header-logo {width:55%;
+#header-logo {
+    width:150px;
     height: auto;
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 2em;
+    right: 0px;
+    text-decoration: none;
+    color: #000000;
+    background-color: rgba(235, 235, 235, 0.80);
+    font-size: 12px;
+    padding: 1em;
+    display: none;
+}
 
+.back-to-top:hover {    
+    background-color: rgba(135, 135, 135, 0.50);
+}
 
 .btn{
     color: var(--portfolio-text-main, #231F20);
     text-align: center;
     font-family: Judson;
-    font-size: 24px;
+    font-size: 29px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -94,29 +139,47 @@ h3 {
     height: fit-content;
     color: var(--portfolio-text-main, #231F20);
     font-family: Judson;
-    font-size: 20px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     padding-left: 10px;
     padding-right: 10px;
+
+}
+
+.footerContainer {
+    border: 3px solid var(--portfolio-logo-main, #608058);
+    width: 98%;
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutContainer {
+    border: 3px solid var(--portfolio-logo-main, #608058);
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
     border: 3px solid var(--portfolio-logo-main, #608058);
-    width: 100%;
+    width: fit-content;
     height: fit-content;
-    padding: auto;
+    padding: 20px;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.casestudy{
-    padding: 5%;
-    height: 400px;
-    width: auto;
-}
 
-.heroimg{
+.heroimg {
     align-content: center;
     padding: 5%;
     height: 400px;
@@ -131,8 +194,10 @@ h3 {
 
 .flexContainer {
     display: flex;
-    width: 88%;
+    width: 90%;
     padding: 5%;
+    justify-content: center;
+    align-items: center;
 }
 
 .flex-item {
@@ -140,12 +205,10 @@ h3 {
     margin: 5px;
 }
 
-.workGrid{
-    display: grid;
-    grid:
-        'image1 image2 image3'
-        'description1 description2 description3';
-    grid-auto-columns: 33%;
+.work{
+    display: flex;
+    justify-content: space-around;
+   
     
 }
 
@@ -192,23 +255,20 @@ h3 {
 @media only screen and (max-width: 600px) {
     .flexContainer {
         flex-direction: column;
+        
     }
 
     .flex-item {
         width: 100%;
         padding: 5%;
     }
-    .workGrid {
-        display: grid;
-        grid:
-            'image1'
-            'description1'
-            'image2'
-            'description2'
-            'image3' 
-            'description3';
-        grid-auto-columns: 100%;
-    }
+
+    .text{ font-size: 20px;}    
+    
+}
+
+.work-img {
+    height: 650px;
 }
 
 #about-heading {
@@ -219,3 +279,4 @@ h3 {
     flex-wrap: wrap;
     width: 50%;
 }
+
